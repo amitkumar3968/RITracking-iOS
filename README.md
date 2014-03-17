@@ -5,6 +5,11 @@ A Tracking SDK for iOS
 
 The SDK can be integrated into iOS application projects and provide convenient tracking via customizing convenience wrappers in subclasses (i.e. app delegate and view controllers). The integrated trackers (Google Analytics, Ad-X Tracking, etc.) are pervasively initialized using a central property list file bundled with the application to contain all required keys, token and further configuration. The Tracking interface is initialized using a file path reference to the property list file.
 
+## Cocoa Pods
+The project uses dependency management by [CocoaPods](http://cocoapods.org/). Please see this [tutorial](http://goo.gl/xJiSy) by raywenderlich.com for further information about CocoaPods integration.
+
+When starting development on the project, fork it, clone it and run `pod install` (Make sure you have installed CocoaPods to your host machine via `sudo gem install cocoapods`).
+
 ## License
 
 The MIT License (MIT)
