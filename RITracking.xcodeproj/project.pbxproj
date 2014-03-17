@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20A4189F487C4874A76CB4B0 /* libPods-RITrackingTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C3C0BD05CCC49C8BE3482EB /* libPods-RITrackingTests.a */; };
 		871769D318CDAFE600C33FE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 871769D218CDAFE600C33FE6 /* Foundation.framework */; };
 		871769D518CDAFE600C33FE6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 871769D418CDAFE600C33FE6 /* CoreGraphics.framework */; };
 		871769D718CDAFE600C33FE6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 871769D618CDAFE600C33FE6 /* UIKit.framework */; };
@@ -18,7 +19,53 @@
 		871769ED18CDAFE600C33FE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 871769D218CDAFE600C33FE6 /* Foundation.framework */; };
 		871769EE18CDAFE600C33FE6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 871769D618CDAFE600C33FE6 /* UIKit.framework */; };
 		871769F618CDAFE600C33FE6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 871769F418CDAFE600C33FE6 /* InfoPlist.strings */; };
-		871769F818CDAFE600C33FE6 /* RITrackingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 871769F718CDAFE600C33FE6 /* RITrackingTests.m */; };
+		87176A0218CDB04B00C33FE6 /* RITrackingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87176A0118CDB04B00C33FE6 /* RITrackingTests.m */; };
+		87176A0618CDB36F00C33FE6 /* RIAppDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87176A0518CDB36F00C33FE6 /* RIAppDelegateTests.m */; };
+		87176A0C18CE009800C33FE6 /* RITracking.m in Sources */ = {isa = PBXBuildFile; fileRef = 87176A0B18CE009800C33FE6 /* RITracking.m */; };
+		8757746118D4948C00E91AB0 /* MBBlockSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8757746018D4948C00E91AB0 /* MBBlockSwizzle.m */; };
+		875774D218D4C27D00E91AB0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D5641A18D365E70067AA0F /* SystemConfiguration.framework */; };
+		875774D318D4C27F00E91AB0 /* BugSense-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87B5773F18D4539A00ED4C03 /* BugSense-iOS.framework */; };
+		875774D418D4C28C00E91AB0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D5641818D365DF0067AA0F /* libz.dylib */; };
+		875774D518D4C28C00E91AB0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D5641618D365D70067AA0F /* CoreData.framework */; };
+		875774D618D4C28C00E91AB0 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D5641418D365D30067AA0F /* AdSupport.framework */; };
+		875774D718D4C28C00E91AB0 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D563EF18D362130067AA0F /* libGoogleAnalyticsServices.a */; };
+		87B5774018D4539A00ED4C03 /* BugSense-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87B5773F18D4539A00ED4C03 /* BugSense-iOS.framework */; };
+		87D563B218D239310067AA0F /* RIGoogleAnalyticsTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D563B118D239310067AA0F /* RIGoogleAnalyticsTracker.m */; };
+		87D563B518D23A9B0067AA0F /* RIBugSenseTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D563B418D23A9B0067AA0F /* RIBugSenseTracker.m */; };
+		87D563B718D352F70067AA0F /* RITracking_example.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87D563B618D352F70067AA0F /* RITracking_example.plist */; };
+		87D563BA18D35A290067AA0F /* RITrackingConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D563B918D35A290067AA0F /* RITrackingConfiguration.m */; };
+		87D563F018D362130067AA0F /* Changelog.txt in Resources */ = {isa = PBXBuildFile; fileRef = 87D563BC18D362130067AA0F /* Changelog.txt */; };
+		87D563F318D362130067AA0F /* CategoryViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87D563C318D362130067AA0F /* CategoryViewController_iPad.xib */; };
+		87D563F418D362130067AA0F /* CategoryViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87D563C418D362130067AA0F /* CategoryViewController_iPhone.xib */; };
+		87D563F518D362130067AA0F /* CuteAnimals-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87D563C518D362130067AA0F /* CuteAnimals-Info.plist */; };
+		87D563F618D362130067AA0F /* Bunny-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87D563CB18D362130067AA0F /* Bunny-1.jpg */; };
+		87D563F718D362130067AA0F /* Bunny-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87D563CC18D362130067AA0F /* Bunny-2.jpg */; };
+		87D563F818D362130067AA0F /* Bunny-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87D563CD18D362130067AA0F /* Bunny-3.jpg */; };
+		87D563F918D362130067AA0F /* Cat-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87D563CE18D362130067AA0F /* Cat-1.jpg */; };
+		87D563FA18D362130067AA0F /* Cat-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87D563CF18D362130067AA0F /* Cat-2.jpg */; };
+		87D563FB18D362130067AA0F /* Cat-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87D563D018D362130067AA0F /* Cat-3.jpg */; };
+		87D563FC18D362130067AA0F /* Cat-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87D563D118D362130067AA0F /* Cat-4.jpg */; };
+		87D563FD18D362130067AA0F /* Lion-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87D563D218D362130067AA0F /* Lion-1.jpg */; };
+		87D563FE18D362130067AA0F /* Lion-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87D563D318D362130067AA0F /* Lion-2.jpg */; };
+		87D563FF18D362130067AA0F /* Lion-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87D563D418D362130067AA0F /* Lion-3.jpg */; };
+		87D5640018D362130067AA0F /* Lion-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87D563D518D362130067AA0F /* Lion-4.jpg */; };
+		87D5640118D362130067AA0F /* Monkey-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87D563D618D362130067AA0F /* Monkey-1.jpg */; };
+		87D5640218D362130067AA0F /* Monkey-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87D563D718D362130067AA0F /* Monkey-2.jpg */; };
+		87D5640318D362130067AA0F /* Monkey-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87D563D818D362130067AA0F /* Monkey-3.jpg */; };
+		87D5640418D362130067AA0F /* Monkey-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87D563D918D362130067AA0F /* Monkey-4.jpg */; };
+		87D5640518D362130067AA0F /* Monkey-5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87D563DA18D362130067AA0F /* Monkey-5.jpg */; };
+		87D5640618D362130067AA0F /* Tiger-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87D563DB18D362130067AA0F /* Tiger-1.jpg */; };
+		87D5640718D362130067AA0F /* Tiger-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87D563DC18D362130067AA0F /* Tiger-2.jpg */; };
+		87D5640B18D362130067AA0F /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 87D563E218D362130067AA0F /* Readme.txt */; };
+		87D5640D18D362130067AA0F /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87D563E518D362130067AA0F /* RootViewController.xib */; };
+		87D5640E18D362130067AA0F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 87D563E618D362130067AA0F /* Settings.bundle */; };
+		87D5640F18D362130067AA0F /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 87D563EE18D362130067AA0F /* Readme.txt */; };
+		87D5641018D362130067AA0F /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D563EF18D362130067AA0F /* libGoogleAnalyticsServices.a */; };
+		87D5641518D365D30067AA0F /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D5641418D365D30067AA0F /* AdSupport.framework */; };
+		87D5641718D365D70067AA0F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D5641618D365D70067AA0F /* CoreData.framework */; };
+		87D5641918D365DF0067AA0F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D5641818D365DF0067AA0F /* libz.dylib */; };
+		87D5641B18D365E70067AA0F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D5641A18D365E70067AA0F /* SystemConfiguration.framework */; };
+		87D5642018D444270067AA0F /* RIOpenURLHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D5641F18D444270067AA0F /* RIOpenURLHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,9 +76,18 @@
 			remoteGlobalIDString = 871769CE18CDAFE600C33FE6;
 			remoteInfo = RITracking;
 		};
+		87D5641218D362130067AA0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87D563C718D362130067AA0F /* CuteAnimals.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 113B6EE3153E1F0B003CAC38;
+			remoteInfo = CuteAnimals;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2AFAC60BDB15467497DE6D89 /* Pods-RITrackingTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RITrackingTests.xcconfig"; path = "Pods/Pods-RITrackingTests.xcconfig"; sourceTree = "<group>"; };
+		7C3C0BD05CCC49C8BE3482EB /* libPods-RITrackingTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RITrackingTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		871769CF18CDAFE600C33FE6 /* RITracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RITracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		871769D218CDAFE600C33FE6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		871769D418CDAFE600C33FE6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -47,7 +103,73 @@
 		871769EB18CDAFE600C33FE6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		871769F318CDAFE600C33FE6 /* RITrackingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RITrackingTests-Info.plist"; sourceTree = "<group>"; };
 		871769F518CDAFE600C33FE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		871769F718CDAFE600C33FE6 /* RITrackingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RITrackingTests.m; sourceTree = "<group>"; };
+		87176A0118CDB04B00C33FE6 /* RITrackingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITrackingTests.m; sourceTree = "<group>"; };
+		87176A0318CDB0DD00C33FE6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		87176A0518CDB36F00C33FE6 /* RIAppDelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIAppDelegateTests.m; sourceTree = "<group>"; };
+		87176A0A18CE009800C33FE6 /* RITracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITracking.h; sourceTree = "<group>"; };
+		87176A0B18CE009800C33FE6 /* RITracking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITracking.m; sourceTree = "<group>"; };
+		8757745F18D4948C00E91AB0 /* MBBlockSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBBlockSwizzle.h; sourceTree = "<group>"; };
+		8757746018D4948C00E91AB0 /* MBBlockSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBBlockSwizzle.m; sourceTree = "<group>"; };
+		87B5773F18D4539A00ED4C03 /* BugSense-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "BugSense-iOS.framework"; path = "Vendor/BugSense_3.6/BugSense-iOS.framework"; sourceTree = "<group>"; };
+		87D563B018D239310067AA0F /* RIGoogleAnalyticsTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIGoogleAnalyticsTracker.h; sourceTree = "<group>"; };
+		87D563B118D239310067AA0F /* RIGoogleAnalyticsTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIGoogleAnalyticsTracker.m; sourceTree = "<group>"; };
+		87D563B318D23A9B0067AA0F /* RIBugSenseTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIBugSenseTracker.h; sourceTree = "<group>"; };
+		87D563B418D23A9B0067AA0F /* RIBugSenseTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIBugSenseTracker.m; sourceTree = "<group>"; };
+		87D563B618D352F70067AA0F /* RITracking_example.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RITracking_example.plist; sourceTree = "<group>"; };
+		87D563B818D35A290067AA0F /* RITrackingConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITrackingConfiguration.h; sourceTree = "<group>"; };
+		87D563B918D35A290067AA0F /* RITrackingConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITrackingConfiguration.m; sourceTree = "<group>"; };
+		87D563BC18D362130067AA0F /* Changelog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Changelog.txt; sourceTree = "<group>"; };
+		87D563BF18D362130067AA0F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		87D563C018D362130067AA0F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		87D563C118D362130067AA0F /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
+		87D563C218D362130067AA0F /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
+		87D563C318D362130067AA0F /* CategoryViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewController_iPad.xib; sourceTree = "<group>"; };
+		87D563C418D362130067AA0F /* CategoryViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewController_iPhone.xib; sourceTree = "<group>"; };
+		87D563C518D362130067AA0F /* CuteAnimals-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CuteAnimals-Info.plist"; sourceTree = "<group>"; };
+		87D563C618D362130067AA0F /* CuteAnimals-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CuteAnimals-Prefix.pch"; sourceTree = "<group>"; };
+		87D563C718D362130067AA0F /* CuteAnimals.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CuteAnimals.xcodeproj; sourceTree = "<group>"; };
+		87D563CB18D362130067AA0F /* Bunny-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Bunny-1.jpg"; sourceTree = "<group>"; };
+		87D563CC18D362130067AA0F /* Bunny-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Bunny-2.jpg"; sourceTree = "<group>"; };
+		87D563CD18D362130067AA0F /* Bunny-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Bunny-3.jpg"; sourceTree = "<group>"; };
+		87D563CE18D362130067AA0F /* Cat-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Cat-1.jpg"; sourceTree = "<group>"; };
+		87D563CF18D362130067AA0F /* Cat-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Cat-2.jpg"; sourceTree = "<group>"; };
+		87D563D018D362130067AA0F /* Cat-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Cat-3.jpg"; sourceTree = "<group>"; };
+		87D563D118D362130067AA0F /* Cat-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Cat-4.jpg"; sourceTree = "<group>"; };
+		87D563D218D362130067AA0F /* Lion-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Lion-1.jpg"; sourceTree = "<group>"; };
+		87D563D318D362130067AA0F /* Lion-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Lion-2.jpg"; sourceTree = "<group>"; };
+		87D563D418D362130067AA0F /* Lion-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Lion-3.jpg"; sourceTree = "<group>"; };
+		87D563D518D362130067AA0F /* Lion-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Lion-4.jpg"; sourceTree = "<group>"; };
+		87D563D618D362130067AA0F /* Monkey-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Monkey-1.jpg"; sourceTree = "<group>"; };
+		87D563D718D362130067AA0F /* Monkey-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Monkey-2.jpg"; sourceTree = "<group>"; };
+		87D563D818D362130067AA0F /* Monkey-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Monkey-3.jpg"; sourceTree = "<group>"; };
+		87D563D918D362130067AA0F /* Monkey-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Monkey-4.jpg"; sourceTree = "<group>"; };
+		87D563DA18D362130067AA0F /* Monkey-5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Monkey-5.jpg"; sourceTree = "<group>"; };
+		87D563DB18D362130067AA0F /* Tiger-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Tiger-1.jpg"; sourceTree = "<group>"; };
+		87D563DC18D362130067AA0F /* Tiger-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Tiger-2.jpg"; sourceTree = "<group>"; };
+		87D563DD18D362130067AA0F /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		87D563DE18D362130067AA0F /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		87D563DF18D362130067AA0F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		87D563E018D362130067AA0F /* NavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavController.h; sourceTree = "<group>"; };
+		87D563E118D362130067AA0F /* NavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavController.m; sourceTree = "<group>"; };
+		87D563E218D362130067AA0F /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		87D563E318D362130067AA0F /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		87D563E418D362130067AA0F /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		87D563E518D362130067AA0F /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		87D563E618D362130067AA0F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		87D563E818D362130067AA0F /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		87D563E918D362130067AA0F /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		87D563EA18D362130067AA0F /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		87D563EB18D362130067AA0F /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		87D563EC18D362130067AA0F /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		87D563ED18D362130067AA0F /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		87D563EE18D362130067AA0F /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		87D563EF18D362130067AA0F /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = Vendor/GoogleAnalyticsServicesiOS_3.03c/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		87D5641418D365D30067AA0F /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		87D5641618D365D70067AA0F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		87D5641818D365DF0067AA0F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		87D5641A18D365E70067AA0F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		87D5641E18D444270067AA0F /* RIOpenURLHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIOpenURLHandler.h; sourceTree = "<group>"; };
+		87D5641F18D444270067AA0F /* RIOpenURLHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIOpenURLHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +177,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				871769D518CDAFE600C33FE6 /* CoreGraphics.framework in Frameworks */,
 				871769D718CDAFE600C33FE6 /* UIKit.framework in Frameworks */,
 				871769D318CDAFE600C33FE6 /* Foundation.framework in Frameworks */,
+				87D5641B18D365E70067AA0F /* SystemConfiguration.framework in Frameworks */,
+				87D5641918D365DF0067AA0F /* libz.dylib in Frameworks */,
+				87D5641718D365D70067AA0F /* CoreData.framework in Frameworks */,
+				87D5641518D365D30067AA0F /* AdSupport.framework in Frameworks */,
+				871769D518CDAFE600C33FE6 /* CoreGraphics.framework in Frameworks */,
+				87D5641018D362130067AA0F /* libGoogleAnalyticsServices.a in Frameworks */,
+				87B5774018D4539A00ED4C03 /* BugSense-iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,9 +193,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				875774D218D4C27D00E91AB0 /* SystemConfiguration.framework in Frameworks */,
+				875774D418D4C28C00E91AB0 /* libz.dylib in Frameworks */,
+				875774D518D4C28C00E91AB0 /* CoreData.framework in Frameworks */,
+				875774D618D4C28C00E91AB0 /* AdSupport.framework in Frameworks */,
+				875774D718D4C28C00E91AB0 /* libGoogleAnalyticsServices.a in Frameworks */,
 				871769EC18CDAFE600C33FE6 /* XCTest.framework in Frameworks */,
 				871769EE18CDAFE600C33FE6 /* UIKit.framework in Frameworks */,
+				875774D318D4C27F00E91AB0 /* BugSense-iOS.framework in Frameworks */,
 				871769ED18CDAFE600C33FE6 /* Foundation.framework in Frameworks */,
+				20A4189F487C4874A76CB4B0 /* libPods-RITrackingTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +212,12 @@
 		871769C618CDAFE600C33FE6 = {
 			isa = PBXGroup;
 			children = (
+				87D563B618D352F70067AA0F /* RITracking_example.plist */,
 				871769D818CDAFE600C33FE6 /* RITracking */,
 				871769F118CDAFE600C33FE6 /* RITrackingTests */,
 				871769D118CDAFE600C33FE6 /* Frameworks */,
 				871769D018CDAFE600C33FE6 /* Products */,
+				2AFAC60BDB15467497DE6D89 /* Pods-RITrackingTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,10 +233,19 @@
 		871769D118CDAFE600C33FE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				87B5773F18D4539A00ED4C03 /* BugSense-iOS.framework */,
+				87D5641A18D365E70067AA0F /* SystemConfiguration.framework */,
+				87D5641818D365DF0067AA0F /* libz.dylib */,
+				87D5641618D365D70067AA0F /* CoreData.framework */,
+				87D5641418D365D30067AA0F /* AdSupport.framework */,
+				87D563BB18D362130067AA0F /* GoogleAnalytics */,
+				87D563EF18D362130067AA0F /* libGoogleAnalyticsServices.a */,
+				87176A0318CDB0DD00C33FE6 /* SenTestingKit.framework */,
 				871769D218CDAFE600C33FE6 /* Foundation.framework */,
 				871769D418CDAFE600C33FE6 /* CoreGraphics.framework */,
 				871769D618CDAFE600C33FE6 /* UIKit.framework */,
 				871769EB18CDAFE600C33FE6 /* XCTest.framework */,
+				7C3C0BD05CCC49C8BE3482EB /* libPods-RITrackingTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,8 +253,15 @@
 		871769D818CDAFE600C33FE6 /* RITracking */ = {
 			isa = PBXGroup;
 			children = (
+				87D563AF18D2391E0067AA0F /* Trackers */,
 				871769E118CDAFE600C33FE6 /* RIAppDelegate.h */,
 				871769E218CDAFE600C33FE6 /* RIAppDelegate.m */,
+				87176A0A18CE009800C33FE6 /* RITracking.h */,
+				87176A0B18CE009800C33FE6 /* RITracking.m */,
+				87D563B818D35A290067AA0F /* RITrackingConfiguration.h */,
+				87D563B918D35A290067AA0F /* RITrackingConfiguration.m */,
+				87D5641E18D444270067AA0F /* RIOpenURLHandler.h */,
+				87D5641F18D444270067AA0F /* RIOpenURLHandler.m */,
 				871769E418CDAFE600C33FE6 /* Images.xcassets */,
 				871769D918CDAFE600C33FE6 /* Supporting Files */,
 			);
@@ -129,8 +282,10 @@
 		871769F118CDAFE600C33FE6 /* RITrackingTests */ = {
 			isa = PBXGroup;
 			children = (
-				871769F718CDAFE600C33FE6 /* RITrackingTests.m */,
+				875774D818D5EF6D00E91AB0 /* Helpers */,
 				871769F218CDAFE600C33FE6 /* Supporting Files */,
+				87176A0118CDB04B00C33FE6 /* RITrackingTests.m */,
+				87176A0518CDB36F00C33FE6 /* RIAppDelegateTests.m */,
 			);
 			path = RITrackingTests;
 			sourceTree = "<group>";
@@ -142,6 +297,119 @@
 				871769F418CDAFE600C33FE6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		875774D818D5EF6D00E91AB0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8757745F18D4948C00E91AB0 /* MBBlockSwizzle.h */,
+				8757746018D4948C00E91AB0 /* MBBlockSwizzle.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		87D563AF18D2391E0067AA0F /* Trackers */ = {
+			isa = PBXGroup;
+			children = (
+				87D563B018D239310067AA0F /* RIGoogleAnalyticsTracker.h */,
+				87D563B118D239310067AA0F /* RIGoogleAnalyticsTracker.m */,
+				87D563B318D23A9B0067AA0F /* RIBugSenseTracker.h */,
+				87D563B418D23A9B0067AA0F /* RIBugSenseTracker.m */,
+			);
+			name = Trackers;
+			sourceTree = "<group>";
+		};
+		87D563BB18D362130067AA0F /* GoogleAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				87D563BC18D362130067AA0F /* Changelog.txt */,
+				87D563BD18D362130067AA0F /* Examples */,
+				87D563E718D362130067AA0F /* Library */,
+				87D563EE18D362130067AA0F /* Readme.txt */,
+			);
+			name = GoogleAnalytics;
+			path = Vendor/GoogleAnalyticsServicesiOS_3.03c/GoogleAnalytics;
+			sourceTree = "<group>";
+		};
+		87D563BD18D362130067AA0F /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				87D563BE18D362130067AA0F /* CuteAnimals */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
+		87D563BE18D362130067AA0F /* CuteAnimals */ = {
+			isa = PBXGroup;
+			children = (
+				87D563BF18D362130067AA0F /* AppDelegate.h */,
+				87D563C018D362130067AA0F /* AppDelegate.m */,
+				87D563C118D362130067AA0F /* CategoryViewController.h */,
+				87D563C218D362130067AA0F /* CategoryViewController.m */,
+				87D563C318D362130067AA0F /* CategoryViewController_iPad.xib */,
+				87D563C418D362130067AA0F /* CategoryViewController_iPhone.xib */,
+				87D563C518D362130067AA0F /* CuteAnimals-Info.plist */,
+				87D563C618D362130067AA0F /* CuteAnimals-Prefix.pch */,
+				87D563C718D362130067AA0F /* CuteAnimals.xcodeproj */,
+				87D563CA18D362130067AA0F /* Images */,
+				87D563DD18D362130067AA0F /* ImageViewController.h */,
+				87D563DE18D362130067AA0F /* ImageViewController.m */,
+				87D563DF18D362130067AA0F /* main.m */,
+				87D563E018D362130067AA0F /* NavController.h */,
+				87D563E118D362130067AA0F /* NavController.m */,
+				87D563E218D362130067AA0F /* Readme.txt */,
+				87D563E318D362130067AA0F /* RootViewController.h */,
+				87D563E418D362130067AA0F /* RootViewController.m */,
+				87D563E518D362130067AA0F /* RootViewController.xib */,
+				87D563E618D362130067AA0F /* Settings.bundle */,
+			);
+			path = CuteAnimals;
+			sourceTree = "<group>";
+		};
+		87D563C818D362130067AA0F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87D5641318D362130067AA0F /* CuteAnimals.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87D563CA18D362130067AA0F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				87D563CB18D362130067AA0F /* Bunny-1.jpg */,
+				87D563CC18D362130067AA0F /* Bunny-2.jpg */,
+				87D563CD18D362130067AA0F /* Bunny-3.jpg */,
+				87D563CE18D362130067AA0F /* Cat-1.jpg */,
+				87D563CF18D362130067AA0F /* Cat-2.jpg */,
+				87D563D018D362130067AA0F /* Cat-3.jpg */,
+				87D563D118D362130067AA0F /* Cat-4.jpg */,
+				87D563D218D362130067AA0F /* Lion-1.jpg */,
+				87D563D318D362130067AA0F /* Lion-2.jpg */,
+				87D563D418D362130067AA0F /* Lion-3.jpg */,
+				87D563D518D362130067AA0F /* Lion-4.jpg */,
+				87D563D618D362130067AA0F /* Monkey-1.jpg */,
+				87D563D718D362130067AA0F /* Monkey-2.jpg */,
+				87D563D818D362130067AA0F /* Monkey-3.jpg */,
+				87D563D918D362130067AA0F /* Monkey-4.jpg */,
+				87D563DA18D362130067AA0F /* Monkey-5.jpg */,
+				87D563DB18D362130067AA0F /* Tiger-1.jpg */,
+				87D563DC18D362130067AA0F /* Tiger-2.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		87D563E718D362130067AA0F /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				87D563E818D362130067AA0F /* GAI.h */,
+				87D563E918D362130067AA0F /* GAIDictionaryBuilder.h */,
+				87D563EA18D362130067AA0F /* GAIFields.h */,
+				87D563EB18D362130067AA0F /* GAILogger.h */,
+				87D563EC18D362130067AA0F /* GAITrackedViewController.h */,
+				87D563ED18D362130067AA0F /* GAITracker.h */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,9 +436,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 871769FE18CDAFE600C33FE6 /* Build configuration list for PBXNativeTarget "RITrackingTests" */;
 			buildPhases = (
+				7C5103D347344BBC9829DDC0 /* Check Pods Manifest.lock */,
 				871769E618CDAFE600C33FE6 /* Sources */,
 				871769E718CDAFE600C33FE6 /* Frameworks */,
 				871769E818CDAFE600C33FE6 /* Resources */,
+				18E095B9F70549F7B78FB889 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -189,7 +459,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = RI;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Martin Biermann";
 				TargetAttributes = {
 					871769E918CDAFE600C33FE6 = {
@@ -207,6 +477,12 @@
 			mainGroup = 871769C618CDAFE600C33FE6;
 			productRefGroup = 871769D018CDAFE600C33FE6 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 87D563C818D362130067AA0F /* Products */;
+					ProjectRef = 87D563C718D362130067AA0F /* CuteAnimals.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				871769CE18CDAFE600C33FE6 /* RITracking */,
@@ -215,13 +491,50 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		87D5641318D362130067AA0F /* CuteAnimals.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = CuteAnimals.app;
+			remoteRef = 87D5641218D362130067AA0F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		871769CD18CDAFE600C33FE6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87D5640F18D362130067AA0F /* Readme.txt in Resources */,
+				87D563B718D352F70067AA0F /* RITracking_example.plist in Resources */,
+				87D563F918D362130067AA0F /* Cat-1.jpg in Resources */,
+				87D563FF18D362130067AA0F /* Lion-3.jpg in Resources */,
 				871769DD18CDAFE600C33FE6 /* InfoPlist.strings in Resources */,
+				87D5640B18D362130067AA0F /* Readme.txt in Resources */,
+				87D5640D18D362130067AA0F /* RootViewController.xib in Resources */,
+				87D563F518D362130067AA0F /* CuteAnimals-Info.plist in Resources */,
+				87D563F718D362130067AA0F /* Bunny-2.jpg in Resources */,
+				87D563F318D362130067AA0F /* CategoryViewController_iPad.xib in Resources */,
+				87D563F618D362130067AA0F /* Bunny-1.jpg in Resources */,
+				87D5640018D362130067AA0F /* Lion-4.jpg in Resources */,
+				87D563FB18D362130067AA0F /* Cat-3.jpg in Resources */,
+				87D563F418D362130067AA0F /* CategoryViewController_iPhone.xib in Resources */,
 				871769E518CDAFE600C33FE6 /* Images.xcassets in Resources */,
+				87D563FE18D362130067AA0F /* Lion-2.jpg in Resources */,
+				87D5640418D362130067AA0F /* Monkey-4.jpg in Resources */,
+				87D5640218D362130067AA0F /* Monkey-2.jpg in Resources */,
+				87D563F818D362130067AA0F /* Bunny-3.jpg in Resources */,
+				87D563FC18D362130067AA0F /* Cat-4.jpg in Resources */,
+				87D563F018D362130067AA0F /* Changelog.txt in Resources */,
+				87D5640E18D362130067AA0F /* Settings.bundle in Resources */,
+				87D5640118D362130067AA0F /* Monkey-1.jpg in Resources */,
+				87D5640718D362130067AA0F /* Tiger-2.jpg in Resources */,
+				87D5640618D362130067AA0F /* Tiger-1.jpg in Resources */,
+				87D5640518D362130067AA0F /* Monkey-5.jpg in Resources */,
+				87D563FA18D362130067AA0F /* Cat-2.jpg in Resources */,
+				87D563FD18D362130067AA0F /* Lion-1.jpg in Resources */,
+				87D5640318D362130067AA0F /* Monkey-3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,13 +548,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18E095B9F70549F7B78FB889 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-RITrackingTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C5103D347344BBC9829DDC0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		871769CB18CDAFE600C33FE6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				871769DF18CDAFE600C33FE6 /* main.m in Sources */,
+				87D563B218D239310067AA0F /* RIGoogleAnalyticsTracker.m in Sources */,
+				87D563BA18D35A290067AA0F /* RITrackingConfiguration.m in Sources */,
+				87D5642018D444270067AA0F /* RIOpenURLHandler.m in Sources */,
 				871769E318CDAFE600C33FE6 /* RIAppDelegate.m in Sources */,
+				87D563B518D23A9B0067AA0F /* RIBugSenseTracker.m in Sources */,
+				87176A0C18CE009800C33FE6 /* RITracking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +600,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				871769F818CDAFE600C33FE6 /* RITrackingTests.m in Sources */,
+				87176A0218CDB04B00C33FE6 /* RITrackingTests.m in Sources */,
+				8757746118D4948C00E91AB0 /* MBBlockSwizzle.m in Sources */,
+				87176A0618CDB36F00C33FE6 /* RIAppDelegateTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +640,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -318,7 +670,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = YES;
 			};
 			name = Debug;
 		};
@@ -326,7 +680,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -350,7 +703,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -360,9 +715,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/Vendor/BugSense_3.6",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RITracking/RITracking-Prefix.pch";
 				INFOPLIST_FILE = "RITracking/RITracking-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Vendor/BugSense_3.6",
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/GoogleAnalyticsServicesiOS_3.03c",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-v";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -373,9 +740,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/Vendor/BugSense_3.6",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RITracking/RITracking-Prefix.pch";
 				INFOPLIST_FILE = "RITracking/RITracking-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Vendor/BugSense_3.6",
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/GoogleAnalyticsServicesiOS_3.03c",
+				);
+				OTHER_LDFLAGS = "-v";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -383,13 +761,14 @@
 		};
 		871769FF18CDAFE600C33FE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AFAC60BDB15467497DE6D89 /* Pods-RITrackingTests.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RITracking.app/RITracking";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/Vendor/BugSense_3.6",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RITracking/RITracking-Prefix.pch";
@@ -398,6 +777,10 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "RITrackingTests/RITrackingTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/GoogleAnalyticsServicesiOS_3.03c",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -406,17 +789,22 @@
 		};
 		87176A0018CDAFE600C33FE6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AFAC60BDB15467497DE6D89 /* Pods-RITrackingTests.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RITracking.app/RITracking";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/Vendor/BugSense_3.6",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RITracking/RITracking-Prefix.pch";
 				INFOPLIST_FILE = "RITrackingTests/RITrackingTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/GoogleAnalyticsServicesiOS_3.03c",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -442,6 +830,7 @@
 				871769FD18CDAFE600C33FE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		871769FE18CDAFE600C33FE6 /* Build configuration list for PBXNativeTarget "RITrackingTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +839,7 @@
 				87176A0018CDAFE600C33FE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
