@@ -89,7 +89,7 @@ NSDictionary *kTestTrackingConfigurationPropertyListDictionary;
                                                        @"action": kEventAction,
                                                        @"label" : kEventLabel};
                                  
-                                 [[RITracking sharedInstance] trackEvent:kEvent withInfo:dic];
+                                // [[RITracking sharedInstance] trackEvent:kEvent withInfo:dic];
                              });
 }
 
@@ -126,7 +126,7 @@ NSDictionary *kTestTrackingConfigurationPropertyListDictionary;
     {
         return [NSDictionary dictionary];
     }, ^{
-        [[RITracking sharedInstance] startWithConfigurationFromPropertyListAtPath:[[NSBundle mainBundle] pathForResource:@"RITracking_example" ofType:@"plist"]
+        [[RITracking sharedInstance] startWithConfigurationFromPropertyListAtPath:@"foo"
                                                                     launchOptions:launchOptions];
         
         NSAssert((0 != (called & kBugsenseCalled)) && (0 != (called & kGoogleAnalyticsCalled)),
@@ -337,10 +337,10 @@ NSDictionary *kTestTrackingConfigurationPropertyListDictionary;
                                                                     launchOptions:nil];
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//            NSAssert((BOOL)((GAI *)[GAI sharedInstance]).trackUncaughtExceptions, @"Google Analytics "
-//                     @"tracker should be initialised to track uncaught exceptions");
-//            NSAssert([GAI sharedInstance].dispatchInterval == 5, @"Google Analytics tracker"
-//                     @"should be initialized with dispatch interval of 5 seconds");
+            NSAssert((BOOL)((GAI *)[GAI sharedInstance]).trackUncaughtExceptions, @"Google Analytics "
+                     @"tracker should be initialised to track uncaught exceptions");
+            NSAssert([GAI sharedInstance].dispatchInterval == 5, @"Google Analytics tracker"
+                     @"should be initialized with dispatch interval of 5 seconds");
             [self notify:XCTAsyncTestCaseStatusSucceeded];
             revertSwizzledTrackingConfig();
             revertSwizzledGAInstance();

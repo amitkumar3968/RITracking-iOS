@@ -40,8 +40,7 @@ static dispatch_once_t sharedInstanceToken;
     
     NSDictionary *properties = [NSDictionary dictionaryWithContentsOfFile:path];
     
-    if (!properties)
-    {
+    if (!properties) {
         RIRaiseError(@"Missing properties when loading property file at path '%@'", path);
         return NO;
     }

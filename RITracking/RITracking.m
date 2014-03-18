@@ -28,17 +28,14 @@ static dispatch_once_t sharedInstanceToken;
     dispatch_once(&sharedInstanceToken, ^{
         sharedInstance = [[RITracking alloc] init];
     });
-    
     return sharedInstance;
 }
 
 - (instancetype)initWithTrackers:(NSArray *)trackers
 {
-    if ((self = [super init]))
-    {
+    if ((self = [super init])){
         self.handlers = [NSMutableArray array];
     }
-    
     return self;
 }
 
@@ -51,12 +48,12 @@ static dispatch_once_t sharedInstanceToken;
 - (void)startWithConfigurationFromPropertyListAtPath:(NSString *)path
                                        launchOptions:(NSDictionary *)launchOptions
 {
-    RIDebugLog(@"Starting initialisation with launch options '%@' and property list at path '%@'", launchOptions, path);
+    RIDebugLog(@"Starting initialisation with launch options '%@' and property list at path '%@'",
+               launchOptions, path);
     
     BOOL loaded = [RITrackingConfiguration loadFromPropertyListAtPath:path];
     
-    if (!loaded)
-    {
+    if (!loaded) {
         RIRaiseError(@"Unexpected error occurred when loading tracking configuration from property "
                      @"list file at path '%@'", path);
         return;
@@ -67,8 +64,7 @@ static dispatch_once_t sharedInstanceToken;
     
     self.trackers = @[googleAnalyticsTracker, bugsenseTracker];
     
-    for (id tracker in self.trackers)
-    {
+    for (id tracker in self.trackers) {
         [((id<RITracker>)tracker).queue addOperationWithBlock:^{
             [(id<RITracker>)tracker applicationDidLaunchWithOptions:launchOptions];
         }];
@@ -77,22 +73,27 @@ static dispatch_once_t sharedInstanceToken;
 
 #pragma mark - RIEventTracking protocol
 
-- (void)trackEvent:(NSString *)event withInfo:(NSDictionary *)info
+- (void)trackEvent:(NSString *)event
+             value:(NSNumber *)value
+            action:(NSString *)action
+          category:(NSString *)category
+              data:(NSDictionary *)data
 {
-    RIDebugLog(@"Tracking event '%@' with info '%@'", event, info);
+    RIDebugLog(@"Tracking event: '%@'", event);
     
-    if (!self.trackers)
-    {
+    if (!self.trackers) {
         RIRaiseError(@"Invalid call with non-existent trackers. Initialisation may have failed.");
         return;
     }
     
-    for (id tracker in self.trackers)
-    {
-        if ([tracker conformsToProtocol:@protocol(RIEventTracking)])
-        {
+    for (id tracker in self.trackers) {
+        if ([tracker conformsToProtocol:@protocol(RIEventTracking)]) {
             [((id<RITracker>)tracker).queue addOperationWithBlock:^{
-                [(id<RIEventTracking>)tracker trackEvent:event withInfo:info];
+                [(id<RIEventTracking>)tracker trackEvent:event
+                                                   value:value
+                                                  action:action
+                                                category:category
+                                                    data:data];
             }];
         }
     }
@@ -104,17 +105,13 @@ static dispatch_once_t sharedInstanceToken;
 {
     RIDebugLog(@"Tracking exception with name '%@'", name);
     
-    if (!self.trackers)
-    {
+    if (!self.trackers) {
         RIRaiseError(@"Invalid call with non-existent trackers. Initialisation may have failed.");
-        
         return;
     }
     
-    for (id tracker in self.trackers)
-    {
-        if ([tracker conformsToProtocol:@protocol(RIExceptionTracking)])
-        {
+    for (id tracker in self.trackers) {
+        if ([tracker conformsToProtocol:@protocol(RIExceptionTracking)]) {
             [((id<RITracker>)tracker).queue addOperationWithBlock:^{
                 [(id<RIExceptionTracking>)tracker trackExceptionWithName:name];
             }];
@@ -132,15 +129,13 @@ static dispatch_once_t sharedInstanceToken;
     NSArray *matches;
     NSMutableArray *macros = [NSMutableArray array];
     
-    while (YES)
-    {
+    while (YES) {
         NSRegularExpression *regex = [NSRegularExpression
                                       regularExpressionWithPattern:@"\\{([^\\}]+)\\}"
                                       options:0
                                       error:&error];
         
-        if (error)
-        {
+        if (error) {
             RIRaiseError(@"Unexpected error when registering open URL handler "
                          @"for pattern '%@': %@", pattern, error);
             return;
@@ -166,11 +161,9 @@ static dispatch_once_t sharedInstanceToken;
                                                                            options:0
                                                                              error:&error];
     
-    if (error)
-    {
+    if (error) {
         RIRaiseError(@"Unexpected error when creating regular expression with pattern '%@'",
                      pattern);
-    
         return;
     }
     
@@ -185,23 +178,18 @@ static dispatch_once_t sharedInstanceToken;
 {
     RIDebugLog(@"Tracking deepling with URL '%@'", url);
     
-    if (!self.trackers)
-    {
+    if (!self.trackers) {
         RIRaiseError(@"Invalid call with non-existent trackers. Tracking initialisation was either "
                      @"missing or has probably failed.");
-        
         return;
     }
     
-    for (RIOpenURLHandler *handler in self.handlers)
-    {
+    for (RIOpenURLHandler *handler in self.handlers) {
         [handler handleOpenURL:url];
     }
     
-    for (id tracker in self.trackers)
-    {
-        if ([tracker conformsToProtocol:@protocol(RIOpenURLTracking)])
-        {
+    for (id tracker in self.trackers) {
+        if ([tracker conformsToProtocol:@protocol(RIOpenURLTracking)]) {
             [((id<RITracker>)tracker).queue addOperationWithBlock:^{
                 [(id<RIOpenURLTracking>)tracker trackOpenURL:url];
             }];
@@ -209,21 +197,20 @@ static dispatch_once_t sharedInstanceToken;
     }
 }
 
+#pragma mark - RIScreenTracking protocol
+
 - (void)trackScreenWithName:(NSString *)name
 {
     RIDebugLog(@"Tracking screen with name: '%@'", name);
     
-    if (!self.trackers)
-    {
+    if (!self.trackers){
         RIRaiseError(@"Invalid call with non-existent trackers. Tracking initialisation was either "
                      @"missing or has probably failed.");
         return;
     }
     
-    for (id tracker in self.trackers)
-    {
-        if ([tracker conformsToProtocol:@protocol(RIScreenTracking)])
-        {
+    for (id tracker in self.trackers) {
+        if ([tracker conformsToProtocol:@protocol(RIScreenTracking)]) {
             [((id<RITracker>)tracker).queue addOperationWithBlock:^{
                 [(id<RIScreenTracking>)tracker trackScreenWithName:name];
             }];

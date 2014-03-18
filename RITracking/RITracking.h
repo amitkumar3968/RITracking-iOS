@@ -30,8 +30,7 @@ if ([RITracking sharedInstance].debug) NSLog(@"RITracking: %@",[NSString stringW
 @protocol RIScreenTracking <NSObject>
 
 /**
- *  This method is implemented by the RIScreenTracking protocol and allow to track information
- *  about the screen name.
+ *  A method to track the display of a screen view to the user, given its name
  *
  *  @param NSString The screen's name.
  */
@@ -42,8 +41,7 @@ if ([RITracking sharedInstance].debug) NSLog(@"RITracking: %@",[NSString stringW
 @protocol RIExceptionTracking <NSObject>
 
 /**
- *  This method is implemented by the RIExceptionTracking protocol and allow to track information
- *  about an exception.
+ *  A method to track an exception, given its name
  *
  *  @param NSString The exception that happed.
  */
@@ -55,7 +53,7 @@ if ([RITracking sharedInstance].debug) NSLog(@"RITracking: %@",[NSString stringW
 
 /**
  *  This method is implemented by the RIOpenURLTracking protocol and allow to track information
- *  about an oURL.
+ *  about an open URL.
  *
  *  @param NSURL The URL opened.
  */
@@ -81,13 +79,61 @@ if ([RITracking sharedInstance].debug) NSLog(@"RITracking: %@",[NSString stringW
 @protocol RIEventTracking <NSObject>
 
 /**
- *  This method is implemented by the RIOpenURLTracking protocol and allow to track information
- *  about an oURL.
+ * A method to track an event happening inside the application.
  *
- *  @param NSString The event's name.
- *  @param NSDictionary Information about the event.
+ * The event may be triggered by the user and further information, such as category, action and
+ * value are available.
+ *
+ * @param NSString Name of the event
+ * @param NSNumber (optional) The value of the action
+ * @param NSString (optional) An identifier for the user action
+ * @param NSString (optional) An identifier for the category of the app the user is in
+ * @param NSDictionary (optional) Additional data about the event
  */
-- (void)trackEvent:(NSString *)event withInfo:(NSDictionary *)info;
+- (void)trackEvent:(NSString *)event
+             value:(NSNumber *)value
+            action:(NSString *)action
+          category:(NSString *)category
+              data:(NSDictionary *)data;
+
+@end
+
+@interface RITrackingProduct : NSObject
+
+@property NSString *identifier;
+@property NSString *name;
+@property NSNumber *quantity;
+@property NSNumber *price;
+@property NSString *currency;
+@property NSString *category;
+
+@end
+
+@interface RITrackingTotal : NSObject
+
+@property NSNumber *net;
+@property NSNumber *tax;
+@property NSNumber *shipping;
+@property NSString *currency;
+
+@end
+
+@protocol RIEcommerceEventTracking <NSObject>
+
+/**
+ * The implementation to this protocol should maintain a state machine to collect cart information.
+ * Adding/Removing to/from cart is forwarded to Ad-X and A4S (http://goo.gl/iSjKut) instantly.
+ * A4S (http://goo.gl/iSjKut) and GA (http://goo.gl/k6iRRC) receive information on checkout.
+ */
+
+/**
+ * This method with include any previous calls to trackAddToCartForProductWithID and trackRemoveFromCartForProductWithID.
+ */
+- (void)trackCheckoutWithTransactionId:(NSString *)id total:(RITrackingTotal *)total;
+
+- (void)trackProductAddToCart:(RITrackingProduct *)product;
+
+- (void)trackRemoveFromCartForProductWithID:(NSString *)id quantity:(NSNumber *)quantity;
 
 @end
 
