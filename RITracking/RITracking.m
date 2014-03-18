@@ -61,10 +61,7 @@ static dispatch_once_t sharedInstanceToken;
                      @"list file at path '%@'", path);
         return;
     }
-    
-    RIOpenURLHandler *riUrlHandler = [[RIOpenURLHandler alloc] init];
-    self.handlers = [[NSMutableArray alloc] initWithObjects:riUrlHandler, nil];
-    
+        
     RIGoogleAnalyticsTracker *googleAnalyticsTracker = [[RIGoogleAnalyticsTracker alloc] init];
     RIBugSenseTracker *bugsenseTracker = [[RIBugSenseTracker alloc] init];
     

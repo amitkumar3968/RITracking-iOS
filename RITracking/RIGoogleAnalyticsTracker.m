@@ -110,24 +110,24 @@ NSString * const kRIGoogleAnalyticsTrackingID = @"RIGoogleAnalyticsTrackingID";
 
 -(void)trackEvent:(NSString *)event withInfo:(NSDictionary *)info
 {
-    RIDebugLog(@"Google Analytics - Tracking event: %@", event);
-    
-    id tracker = [[GAI sharedInstance] defaultTracker];
-    
-    if (!tracker)
-    {
-        RIRaiseError(@"Missing default Google Analytics tracker");
-        
-        return;
-    }
-    
-#warning check if this is working
-    NSDictionary *dict = [[GAIDictionaryBuilder
-                           createEventWithCategory:[info objectForKey:@"category"]      // Event category (required)
-                                            action:[info objectForKey:@"action"]        // Event action (required)
-                                             label:event                                // Event label
-                                             value:nil] build];                         // Event value
-    [tracker send:dict];
+//    RIDebugLog(@"Google Analytics - Tracking event: %@", event);
+//    
+//    id tracker = [[GAI sharedInstance] defaultTracker];
+//    
+//    if (!tracker)
+//    {
+//        RIRaiseError(@"Missing default Google Analytics tracker");
+//        
+//        return;
+//    }
+//    
+//#warning check if this is working
+//    NSDictionary *dict = [[GAIDictionaryBuilder
+//                           createEventWithCategory:[info objectForKey:@"category"]      // Event category (required)
+//                                            action:[info objectForKey:@"action"]        // Event action (required)
+//                                             label:event                                // Event label
+//                                             value:nil] build];                         // Event value
+//    [tracker send:dict];
 }
 
 @end
