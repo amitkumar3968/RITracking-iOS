@@ -37,12 +37,17 @@ static dispatch_once_t sharedInstanceToken;
 {
     // Clear old values to avoid stale information
     [RITrackingConfiguration sharedInstance].properties = nil;
+    
     NSDictionary *properties = [NSDictionary dictionaryWithContentsOfFile:path];
-    if (!properties) {
+    
+    if (!properties)
+    {
         RIRaiseError(@"Missing properties when loading property file at path '%@'", path);
         return NO;
     }
+    
     [RITrackingConfiguration sharedInstance].properties = properties;
+    
     return YES;
 }
 

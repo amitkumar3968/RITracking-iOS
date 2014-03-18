@@ -18,10 +18,13 @@ NSString * const kRIBugsenseAPIKey = @"RIBugsenseAPIKey";
 - (id)init
 {
     RIDebugLog(@"Initializing BugSense tracker");
-    if ((self = [super init])) {
+    
+    if ((self = [super init]))
+    {
         self.queue = [[NSOperationQueue alloc] init];
         self.queue.maxConcurrentOperationCount = 1;
     }
+    
     return self;
 }
 
@@ -30,11 +33,16 @@ NSString * const kRIBugsenseAPIKey = @"RIBugsenseAPIKey";
 - (void)applicationDidLaunchWithOptions:(NSDictionary *)options
 {
     RIDebugLog(@"BugSense tracker tracks application launch");
+    
     NSString *apiKey = [RITrackingConfiguration valueForKey:kRIBugsenseAPIKey];
-    if (!apiKey) {
+    
+    if (!apiKey)
+    {
         RIRaiseError(@"Missing Bugsense API key in tracking properties")
+        
         return;
     }
+    
     [BugSenseController sharedControllerWithBugSenseAPIKey:apiKey];
 }
 
@@ -43,8 +51,11 @@ NSString * const kRIBugsenseAPIKey = @"RIBugsenseAPIKey";
 - (void)trackExceptionWithName:(NSString *)name
 {
     RIDebugLog(@"BugSense tracker tracks exception with name '%@'", name);
+    
     BOOL result = [BugSenseController logException:nil withExtraData:@{@"name": name}];
-    if (!result) {
+    
+    if (!result)
+    {
         RIRaiseError(@"Unexpected negative result on logging exception with name: %@", name);
     }
 }
