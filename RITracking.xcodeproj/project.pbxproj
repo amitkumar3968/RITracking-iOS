@@ -56,7 +56,7 @@
 		87D5640518D362130067AA0F /* Monkey-5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87D563DA18D362130067AA0F /* Monkey-5.jpg */; };
 		87D5640618D362130067AA0F /* Tiger-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87D563DB18D362130067AA0F /* Tiger-1.jpg */; };
 		87D5640718D362130067AA0F /* Tiger-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87D563DC18D362130067AA0F /* Tiger-2.jpg */; };
-		87D5640B18D362130067AA0F /* Readme2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 87D563E218D362130067AA0F /* Readme2.txt */; };
+		87D5640B18D362130067AA0F /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 87D563E218D362130067AA0F /* Readme.txt */; };
 		87D5640D18D362130067AA0F /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87D563E518D362130067AA0F /* RootViewController.xib */; };
 		87D5640E18D362130067AA0F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 87D563E618D362130067AA0F /* Settings.bundle */; };
 		87D5640F18D362130067AA0F /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 87D563EE18D362130067AA0F /* Readme.txt */; };
@@ -151,7 +151,7 @@
 		87D563DF18D362130067AA0F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		87D563E018D362130067AA0F /* NavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavController.h; sourceTree = "<group>"; };
 		87D563E118D362130067AA0F /* NavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavController.m; sourceTree = "<group>"; };
-		87D563E218D362130067AA0F /* Readme2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme2.txt; sourceTree = "<group>"; };
+		87D563E218D362130067AA0F /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
 		87D563E318D362130067AA0F /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		87D563E418D362130067AA0F /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		87D563E518D362130067AA0F /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
@@ -357,7 +357,7 @@
 				87D563DF18D362130067AA0F /* main.m */,
 				87D563E018D362130067AA0F /* NavController.h */,
 				87D563E118D362130067AA0F /* NavController.m */,
-				87D563E218D362130067AA0F /* Readme2.txt */,
+				87D563E218D362130067AA0F /* Readme.txt */,
 				87D563E318D362130067AA0F /* RootViewController.h */,
 				87D563E418D362130067AA0F /* RootViewController.m */,
 				87D563E518D362130067AA0F /* RootViewController.xib */,
@@ -511,7 +511,7 @@
 				87D563F918D362130067AA0F /* Cat-1.jpg in Resources */,
 				87D563FF18D362130067AA0F /* Lion-3.jpg in Resources */,
 				871769DD18CDAFE600C33FE6 /* InfoPlist.strings in Resources */,
-				87D5640B18D362130067AA0F /* Readme2.txt in Resources */,
+				87D5640B18D362130067AA0F /* Readme.txt in Resources */,
 				87D5640D18D362130067AA0F /* RootViewController.xib in Resources */,
 				87D563F518D362130067AA0F /* CuteAnimals-Info.plist in Resources */,
 				87D563F718D362130067AA0F /* Bunny-2.jpg in Resources */,
