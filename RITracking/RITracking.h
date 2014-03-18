@@ -99,7 +99,7 @@ if ([RITracking sharedInstance].debug) NSLog(@"RITracking: %@",[NSString stringW
 @property NSOperationQueue *queue;
 
 /**
- *  
+ *  Lanched app with options
  *
  *  @param NSString The event's name.
  *  @param NSDictionary The launching options.
@@ -121,9 +121,20 @@ if ([RITracking sharedInstance].debug) NSLog(@"RITracking: %@",[NSString stringW
  */
 @property (nonatomic) BOOL debug;
 
+/**
+ *  Load the configuration needed from a plist file in the given path and launching options
+ *
+ *  @param NSString Path to the configuration file (plist file).
+ *  @param NSDictionary The launching options.
+ */
 - (void)startWithConfigurationFromPropertyListAtPath:(NSString *)path
                                        launchOptions:(NSDictionary *)launchOptions;
 
+/**
+ *  Creates and initializes an `RITracking`object
+ *
+ *  @return The newly-initialized object
+ */
 + (instancetype)sharedInstance;
 
 @end
