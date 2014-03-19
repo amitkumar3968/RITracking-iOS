@@ -181,7 +181,7 @@ if ([RITracking sharedInstance].debug) NSLog(@"RITracking: %@",[NSString stringW
  *  @param idTrans The transaction ID
  *  @param total RITrackingProduct product
  */
-- (void)trackCheckoutWithTransactionId:(NSString *)idTrans total:(RITrackingTotal *)total;
+- (void)trackCheckoutWithTransactionId:(NSString *)idTransaction total:(RITrackingTotal *)total;
 
 /**
  *  Track a product that was added to the cart
@@ -196,7 +196,7 @@ if ([RITracking sharedInstance].debug) NSLog(@"RITracking: %@",[NSString stringW
  *  @param idTrans The transaction ID
  *  @param quantity The quantity removed from the cart
  */
-- (void)trackRemoveFromCartForProductWithID:(NSString *)idTrans quantity:(NSNumber *)quantity;
+- (void)trackRemoveFromCartForProductWithID:(NSString *)idTransaction quantity:(NSNumber *)quantity;
 
 @end
 
