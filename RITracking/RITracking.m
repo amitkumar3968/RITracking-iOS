@@ -58,7 +58,7 @@ static dispatch_once_t sharedInstanceToken;
                      @"list file at path '%@'", path);
         return;
     }
-        
+    
     RIGoogleAnalyticsTracker *googleAnalyticsTracker = [[RIGoogleAnalyticsTracker alloc] init];
     RIBugSenseTracker *bugsenseTracker = [[RIBugSenseTracker alloc] init];
     

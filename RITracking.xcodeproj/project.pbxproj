@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		4A642CA618D9C2A8006607D8 /* Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 4A642CAA18D9C2A8006607D8 /* Build configuration list for PBXAggregateTarget "Documentation" */;
+			buildPhases = (
+				4A642CAB18D9C2AC006607D8 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Documentation;
+			productName = Documentation;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		20A4189F487C4874A76CB4B0 /* libPods-RITrackingTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C3C0BD05CCC49C8BE3482EB /* libPods-RITrackingTests.a */; };
 		871769D318CDAFE600C33FE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 871769D218CDAFE600C33FE6 /* Foundation.framework */; };
@@ -487,6 +501,7 @@
 			targets = (
 				871769CE18CDAFE600C33FE6 /* RITracking */,
 				871769E918CDAFE600C33FE6 /* RITrackingTests */,
+				4A642CA618D9C2A8006607D8 /* Documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -564,6 +579,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Pods-RITrackingTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4A642CAB18D9C2AC006607D8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"Rocket Internet\" \\\n--company-id \"de.rocket-internet.RITracking\" \\\n--output \"/Users/miguelchaves/Desktop/documentation\" \\\n--install-docset \\\n--logformat xcode \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--merge-categories \\\n--exit-threshold 2 \\\n--docset-platform-family iphoneos \\\n--ignore \"*.m\" \\\n--ignore \"LoadableCategory.h\" \\\n--index-desc \"${PROJECT_DIR}/readme.markdown\" \\\n\"${PROJECT_DIR}/${PROJECT_NAME}\"";
+		};
 		7C5103D347344BBC9829DDC0 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -636,6 +664,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4A642CA718D9C2A8006607D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4A642CA818D9C2A8006607D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		871769F918CDAFE600C33FE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -814,6 +856,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4A642CAA18D9C2A8006607D8 /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A642CA718D9C2A8006607D8 /* Debug */,
+				4A642CA818D9C2A8006607D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		871769CA18CDAFE600C33FE6 /* Build configuration list for PBXProject "RITracking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

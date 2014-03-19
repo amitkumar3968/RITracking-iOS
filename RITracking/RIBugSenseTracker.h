@@ -11,10 +11,13 @@
 
 extern NSString * const kRIBugsenseAPIKey;
 
+/**
+ *  RIBugSenseTracker allows to track bugs with BugSense
+ */
 @interface RIBugSenseTracker : NSObject
 <
-    RITracker,
-    RIExceptionTracking
+RITracker,
+RIExceptionTracking
 >
 
 @end

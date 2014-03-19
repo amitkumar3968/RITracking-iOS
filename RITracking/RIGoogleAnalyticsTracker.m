@@ -7,7 +7,7 @@
 //
 
 // Requires Frameworks:
-// 
+//
 // libGoogleAnalyticsServices.a
 // AdSupport.framework
 // CoreData.framework

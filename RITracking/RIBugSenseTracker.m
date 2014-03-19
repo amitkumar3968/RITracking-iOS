@@ -49,7 +49,7 @@ NSString * const kRIBugsenseAPIKey = @"RIBugsenseAPIKey";
     RIDebugLog(@"BugSense tracker tracks exception with name '%@'", name);
     
     BOOL result = [BugSenseController logException:nil withExtraData:@{@"name": name}];
-        
+    
     if (!result) {
         RIRaiseError(@"Unexpected negative result on logging exception with name: %@", name);
     }

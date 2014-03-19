@@ -27,41 +27,49 @@ if ([RITracking sharedInstance].debug) NSLog(@"RITracking: %@",[NSString stringW
 #import <Foundation/Foundation.h>
 #import "RITrackingConfiguration.h"
 
+/**
+ *  This protocol implements tracking to a given screen
+ */
 @protocol RIScreenTracking <NSObject>
 
 /**
- *  A method to track the display of a screen view to the user, given its name
+ *  Track the display of a presented screen view to the user, given its name
  *
- *  @param NSString The screen's name.
+ *  @param name The screen's name.
  */
 - (void)trackScreenWithName:(NSString *)name;
 
 @end
 
+/**
+ *  This protocol implements tracking to a exception that occurred
+ */
 @protocol RIExceptionTracking <NSObject>
 
 /**
- *  A method to track an exception, given its name
+ *  Allow to track an exception, given its name
  *
- *  @param NSString The exception that happed.
+ *  @param name The exception that happed.
  */
 - (void)trackExceptionWithName:(NSString *)name;
 
 @end
 
+/**
+ *  This protocol implements tracking to a open URL
+ */
 @protocol RIOpenURLTracking <NSObject>
 
 /**
- *  This method is implemented by the RIOpenURLTracking protocol and allow to track information
- *  about an open URL.
+ *  Allow to tack an Open URL, given that URL
  *
- *  @param NSURL The URL opened.
+ *  @param url The URL opened.
  */
 - (void)trackOpenURL:(NSURL *)url;
 
 @optional
 
-/** 
+/**
  *  Register a handler block to be called when the given pattern matches a deeplink URL.
  *
  *  The deepling URL pattern may contain capture directives of the format `{<name>}` where '<name>'
@@ -69,13 +77,16 @@ if ([RITracking sharedInstance].debug) NSLog(@"RITracking: %@",[NSString stringW
  *  The handler block receives a dictionary hash containing key-value properties obtained from pattern
  *  capture directives and from the query string of the deeplink URL.
  *
- *  @param (void(^)(NSDictionary *)) A handler to be called on matching a deeplink URL.
- *  @param NSString A pattern of regex extended with capture directive syntax.
+ *  @param handler A handler to be called on matching a deeplink URL.
+ *  @param pattern A pattern of regex extended with capture directive syntax.
  */
 - (void)registerHandler:(void(^)(NSDictionary *))handler forOpenURLPattern:(NSString *)pattern;
 
 @end
 
+/**
+ *  This protocol implements tracking to an event
+ */
 @protocol RIEventTracking <NSObject>
 
 /**
@@ -84,11 +95,11 @@ if ([RITracking sharedInstance].debug) NSLog(@"RITracking: %@",[NSString stringW
  * The event may be triggered by the user and further information, such as category, action and
  * value are available.
  *
- * @param NSString Name of the event
- * @param NSNumber (optional) The value of the action
- * @param NSString (optional) An identifier for the user action
- * @param NSString (optional) An identifier for the category of the app the user is in
- * @param NSDictionary (optional) Additional data about the event
+ * @param event Name of the event
+ * @param value (optional) The value of the action
+ * @param action (optional) An identifier for the user action
+ * @param category (optional) An identifier for the category of the app the user is in
+ * @param data (optional) Additional data about the event
  */
 - (void)trackEvent:(NSString *)event
              value:(NSNumber *)value
@@ -98,45 +109,100 @@ if ([RITracking sharedInstance].debug) NSLog(@"RITracking: %@",[NSString stringW
 
 @end
 
+/**
+ *  Interface of the RITrackingProduct, that is the product used for the commerce tracking
+ */
 @interface RITrackingProduct : NSObject
 
+/**
+ *  Identifier of the product
+ */
 @property NSString *identifier;
+/**
+ *  Name of the product
+ */
 @property NSString *name;
+/**
+ *  Quantity of the product
+ */
 @property NSNumber *quantity;
+/**
+ *  Price of the product
+ */
 @property NSNumber *price;
+/**
+ *  Currency of the product price
+ */
 @property NSString *currency;
+/**
+ *  Category of the product
+ */
 @property NSString *category;
 
 @end
 
+/**
+ *  Interface of the RITrackingTotal, used for the commerce tracking
+ */
 @interface RITrackingTotal : NSObject
 
+/**
+ *  Net of the order
+ */
 @property NSNumber *net;
+/**
+ *  Tax of the order
+ */
 @property NSNumber *tax;
+/**
+ *  Shipping price of the order
+ */
 @property NSNumber *shipping;
+/**
+ *  Currency of the order
+ */
 @property NSString *currency;
 
 @end
 
+/**
+ *  This protocol implements tracking to the commerce transactions
+ *
+ *  The implementation to this protocol should maintain a state machine to collect cart information.
+ *  Adding/Removing to/from cart is forwarded to Ad-X and A4S (http://goo.gl/iSjKut) instantly.
+ *  A4S (http://goo.gl/iSjKut) and GA (http://goo.gl/k6iRRC) receive information on checkout.
+ */
 @protocol RIEcommerceEventTracking <NSObject>
 
 /**
- * The implementation to this protocol should maintain a state machine to collect cart information.
- * Adding/Removing to/from cart is forwarded to Ad-X and A4S (http://goo.gl/iSjKut) instantly.
- * A4S (http://goo.gl/iSjKut) and GA (http://goo.gl/k6iRRC) receive information on checkout.
+ *  This method with include any previous calls to trackAddToCartForProductWithID and
+ *  trackRemoveFromCartForProductWithID.
+ *
+ *  @param idTrans The transaction ID
+ *  @param total RITrackingProduct product
  */
+- (void)trackCheckoutWithTransactionId:(NSString *)idTrans total:(RITrackingTotal *)total;
 
 /**
- * This method with include any previous calls to trackAddToCartForProductWithID and trackRemoveFromCartForProductWithID.
+ *  Track a product that was added to the cart
+ *
+ *  @param product The product added
  */
-- (void)trackCheckoutWithTransactionId:(NSString *)id total:(RITrackingTotal *)total;
-
 - (void)trackProductAddToCart:(RITrackingProduct *)product;
 
-- (void)trackRemoveFromCartForProductWithID:(NSString *)id quantity:(NSNumber *)quantity;
+/**
+ *  Track a product that was removed from the cart
+ *
+ *  @param idTrans The transaction ID
+ *  @param quantity The quantity removed from the cart
+ */
+- (void)trackRemoveFromCartForProductWithID:(NSString *)idTrans quantity:(NSNumber *)quantity;
 
 @end
 
+/**
+ *  RITracker protocol implements the initialization of the trackers
+ */
 @protocol RITracker <NSObject>
 
 /**
@@ -147,22 +213,24 @@ if ([RITracking sharedInstance].debug) NSLog(@"RITracking: %@",[NSString stringW
 /**
  *  Lanched app with options
  *
- *  @param NSString The event's name.
- *  @param NSDictionary The launching options.
+ *  @param options The launching options.
  */
 - (void)applicationDidLaunchWithOptions:(NSDictionary *)options;
 
 @end
 
+/**
+ *  Interface of the RITracking
+ */
 @interface RITracking : NSObject
 <
-    RIEventTracking,
-    RIScreenTracking,
-    RIExceptionTracking,
-    RIOpenURLTracking
+RIEventTracking,
+RIScreenTracking,
+RIExceptionTracking,
+RIOpenURLTracking
 >
 
-/** 
+/**
  *  A flag to enable debug logging.
  */
 @property (nonatomic) BOOL debug;
@@ -170,8 +238,8 @@ if ([RITracking sharedInstance].debug) NSLog(@"RITracking: %@",[NSString stringW
 /**
  *  Load the configuration needed from a plist file in the given path and launching options
  *
- *  @param NSString Path to the configuration file (plist file).
- *  @param NSDictionary The launching options.
+ *  @param path Path to the configuration file (plist file).
+ *  @param launchOptions The launching options.
  */
 - (void)startWithConfigurationFromPropertyListAtPath:(NSString *)path
                                        launchOptions:(NSDictionary *)launchOptions;
