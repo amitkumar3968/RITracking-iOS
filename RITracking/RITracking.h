@@ -224,10 +224,10 @@ if ([RITracking sharedInstance].debug) NSLog(@"RITracking: %@",[NSString stringW
  */
 @interface RITracking : NSObject
 <
-RIEventTracking,
-RIScreenTracking,
-RIExceptionTracking,
-RIOpenURLTracking
+    RIEventTracking,
+    RIScreenTracking,
+    RIExceptionTracking,
+    RIOpenURLTracking
 >
 
 /**

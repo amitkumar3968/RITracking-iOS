@@ -16,8 +16,8 @@ extern NSString * const kRIBugsenseAPIKey;
  */
 @interface RIBugSenseTracker : NSObject
 <
-RITracker,
-RIExceptionTracking
+    RITracker,
+    RIExceptionTracking
 >
 
 @end

@@ -16,10 +16,10 @@ extern NSString * const kRIGoogleAnalyticsTrackingID;
  */
 @interface RIGoogleAnalyticsTracker : NSObject
 <
-RITracker,
-RIEventTracking,
-RIExceptionTracking,
-RIScreenTracking
+    RITracker,
+    RIEventTracking,
+    RIExceptionTracking,
+    RIScreenTracking
 >
 
 @end
