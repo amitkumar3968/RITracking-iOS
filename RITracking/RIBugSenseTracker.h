@@ -12,7 +12,7 @@
 extern NSString * const kRIBugsenseAPIKey;
 
 /**
- *  RIBugSenseTracker allows to track bugs with BugSense
+ *  Convenience controller to proxy tracking information to BugSense
  */
 @interface RIBugSenseTracker : NSObject
 <

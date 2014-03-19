@@ -14,7 +14,7 @@
 @interface RITrackingConfiguration : NSObject
 
 /**
- *  Searchs a value for a given key and return that value
+ *  Lookup a configuration value, given it's key
  *
  *  @param key The key to search
  *
@@ -23,7 +23,7 @@
 + (id)valueForKey:(NSString *)key;
 
 /**
- *  Loads a property list located in the given path
+ *  Loads a property list located in the given path to read the contained configuration settings
  *
  *  @param path The path where is the configuration file
  *

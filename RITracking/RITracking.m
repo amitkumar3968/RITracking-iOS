@@ -33,7 +33,7 @@ static dispatch_once_t sharedInstanceToken;
 
 - (instancetype)initWithTrackers:(NSArray *)trackers
 {
-    if ((self = [super init])){
+    if ((self = [super init])) {
         self.handlers = [NSMutableArray array];
     }
     return self;
@@ -79,7 +79,8 @@ static dispatch_once_t sharedInstanceToken;
           category:(NSString *)category
               data:(NSDictionary *)data
 {
-    RIDebugLog(@"Tracking event: '%@'", event);
+    RIDebugLog(@"Tracking event: '%@' with value: %@ with action: %@ with category: %@ and data: %@"
+               , event, value, action, category, data);
     
     if (!self.trackers) {
         RIRaiseError(@"Invalid call with non-existent trackers. Initialisation may have failed.");

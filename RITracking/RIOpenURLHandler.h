@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 
 /**
- * RIOpenURLHandler allows to handle an Open URL (or deeplink)
+ *  Convenience controller to wrap logic for particular deepling URL structures based on regular 
+ *  expression match pattern
  */
 @interface RIOpenURLHandler : NSObject
 

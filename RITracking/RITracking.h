@@ -42,12 +42,12 @@ if ([RITracking sharedInstance].debug) NSLog(@"RITracking: %@",[NSString stringW
 @end
 
 /**
- *  This protocol implements tracking to a exception that occurred
+ *  API protocol for exception tracking
  */
 @protocol RIExceptionTracking <NSObject>
 
 /**
- *  Allow to track an exception, given its name
+ *  Track an exception occurrence by name
  *
  *  @param name The exception that happed.
  */
@@ -56,12 +56,12 @@ if ([RITracking sharedInstance].debug) NSLog(@"RITracking: %@",[NSString stringW
 @end
 
 /**
- *  This protocol implements tracking to a open URL
+ *  API protocol for deeplink URL tracking
  */
 @protocol RIOpenURLTracking <NSObject>
 
 /**
- *  Allow to tack an Open URL, given that URL
+ *  Track a deeplink URL
  *
  *  @param url The URL opened.
  */
@@ -206,12 +206,12 @@ if ([RITracking sharedInstance].debug) NSLog(@"RITracking: %@",[NSString stringW
 @protocol RITracker <NSObject>
 
 /**
- *  The operation queue.
+ *  Queue to add the concurrent operations.
  */
 @property NSOperationQueue *queue;
 
 /**
- *  Lanched app with options
+ *  Hook to recognise an app launch, given launch options
  *
  *  @param options The launching options.
  */

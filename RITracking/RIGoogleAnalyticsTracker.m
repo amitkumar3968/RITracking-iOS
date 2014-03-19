@@ -124,4 +124,39 @@ NSString * const kRIGoogleAnalyticsTrackingID = @"RIGoogleAnalyticsTrackingID";
     [tracker send:dict];
 }
 
+#pragma mark - RIEcommerceEventTracking
+
+-(void)trackCheckoutWithTransactionId:(NSString *)idTransaction
+                                total:(RITrackingTotal *)total
+{
+    RIDebugLog(@"Google Analytics - Tracking checkout with transaction id: %@", idTransaction);
+    
+    id tracker = [[GAI sharedInstance] defaultTracker];
+    
+    if (!tracker) {
+        RIRaiseError(@"Missing default Google Analytics tracker");
+        return;
+    }
+    
+    NSDictionary *dict = [[GAIDictionaryBuilder createTransactionWithId:idTransaction
+                                                            affiliation:nil
+                                                                revenue:nil
+                                                                    tax:total.tax
+                                                               shipping:total.shipping
+                                                           currencyCode:total.currency] build];
+    
+    [tracker send:dict];
+}
+
+-(void)trackProductAddToCart:(RITrackingProduct *)product
+{
+
+}
+
+-(void)trackRemoveFromCartForProductWithID:(NSString *)idTransaction
+                                  quantity:(NSNumber *)quantity
+{
+    
+}
+
 @end
