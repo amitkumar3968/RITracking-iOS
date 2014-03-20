@@ -13,10 +13,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [RITracking sharedInstance].debug = YES;
-//    NSString *trackingConfigFilePath = [[NSBundle mainBundle] pathForResource:@"RITracking"
-//                                                                       ofType:@"plist"];
-//    [[RITracking sharedInstance] startWithConfigurationFromPropertyListAtPath:trackingConfigFilePath
-//                                                                launchOptions:launchOptions];
+    
+    NSString *trackingConfigFilePath = [[NSBundle mainBundle] pathForResource:@"RITracking_example"
+                                                                       ofType:@"plist"];
+    
+    [[RITracking sharedInstance] startWithConfigurationFromPropertyListAtPath:trackingConfigFilePath
+                                                                launchOptions:launchOptions];
+    
     return YES;
 }
 

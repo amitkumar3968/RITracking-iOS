@@ -11,6 +11,13 @@
 
 extern NSString * const kRIBugsenseAPIKey;
 
-@interface RIBugSenseTracker : NSObject <RITracker, RIExceptionTracking>
+/**
+ *  Convenience controller to proxy tracking information to BugSense
+ */
+@interface RIBugSenseTracker : NSObject
+<
+    RITracker,
+    RIExceptionTracking
+>
 
 @end

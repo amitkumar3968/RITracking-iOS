@@ -11,12 +11,16 @@
 
 extern NSString * const kRIGoogleAnalyticsTrackingID;
 
+/**
+ *  Convenience controller to proxy-pass tracking information to Google Analytics
+ */
 @interface RIGoogleAnalyticsTracker : NSObject
 <
     RITracker,
     RIEventTracking,
     RIExceptionTracking,
-    RIScreenTracking
+    RIScreenTracking,
+    RIEcommerceEventTracking
 >
 
 @end
