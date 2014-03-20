@@ -206,7 +206,7 @@ if ([RITracking sharedInstance].debug) NSLog(@"RITracking: %@",[NSString stringW
 @protocol RITracker <NSObject>
 
 /**
- *  Queue to add the concurrent operations.
+ *  Queue to avoid different trackers to stall each other or the app flow.
  */
 @property NSOperationQueue *queue;
 
